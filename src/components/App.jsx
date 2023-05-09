@@ -3,6 +3,7 @@ import Form from "./Form/Form";
 import { ContactList } from "./ContactList/ContactList";
 import  { Filter }  from "./Filter/Filter";
 import shortid from "shortid";
+import './App.module.css'
 
 export class App extends Component {
   state = {
@@ -53,8 +54,9 @@ render() {
     
   return (
 
-    <div>
-
+    <section>
+      
+      <h1>Phonebook</h1>
       <Form onSubmit={this.addContact}/> 
       <h2> Contacts </h2>
 
@@ -64,7 +66,7 @@ render() {
       contacts={this.findContact()}
       onDeleteContact={this.deleteContact} />
      
-    </div>
+    </section>
   );
 }
 };

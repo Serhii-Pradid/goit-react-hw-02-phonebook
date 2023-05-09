@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './ContactList.module.css'
 
 export const ContactList = ({contacts, onDeleteContact}) => (
     <ul>
@@ -6,7 +7,7 @@ export const ContactList = ({contacts, onDeleteContact}) => (
             return (
                 <li key={id}>
                     <p> {name} : {number} </p>
-                    <button onClick={() => onDeleteContact(id)}> Delete </button>
+                    <button className={css.buttonDelete} onClick={() => onDeleteContact(id)}> Delete </button>
                 </li>
             )
         })}

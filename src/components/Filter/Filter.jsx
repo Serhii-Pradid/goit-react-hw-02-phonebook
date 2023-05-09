@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Filter.module.css'
 
 export const Filter = ({value, onChange}) => (
     <ul>
@@ -6,6 +7,7 @@ export const Filter = ({value, onChange}) => (
       <input 
       type="text" 
       value={value} 
+      placeholder='Name Surname'
       onChange={onChange} />
      </label>
     </ul>
