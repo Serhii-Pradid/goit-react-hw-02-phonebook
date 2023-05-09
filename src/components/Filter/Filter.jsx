@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 export const Filter = ({value, onChange}) => (
     <ul>
@@ -9,3 +10,8 @@ export const Filter = ({value, onChange}) => (
      </label>
     </ul>
 )
+
+Filter.propTypes ={
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired
+}
