@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import shortid from "shortid";
+import css from './Form.module.css'
 
 class Form extends Component {
     
@@ -30,25 +31,25 @@ handleSubmit = event => {
 
         return (
             <form onSubmit={this.handleSubmit}>
-
+<div className={css.fieldForm}>
       <label htmlFor={this.nameInput}> Name
    <input
   type="text"
+  placeholder="Name Surname"
   name="name"
   value={this.state.name}
   pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
   title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
   required
   onChange={this.handleChange}
-  id={this.nameInput}
-  />
+  id={this.nameInput}/>
+    </label>
 
-       </label>
-
-     <label> Contacts
+     <label htmlFor={this.nameInput}> Number
 
    <input
   type="tel"
+  placeholder="xxx-xx-xx"
   name="number"
   value={this.state.number}
   pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -56,10 +57,9 @@ handleSubmit = event => {
   required
   onChange={this.handleChange}/>
       </label>
+</div>
 
-<br />
-
-<button type="submit"> Add Contact </button>
+<button className={css.buttonForm} type="submit"> Add Contact </button>
 
 </form>
          );
