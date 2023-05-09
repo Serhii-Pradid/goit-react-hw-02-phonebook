@@ -55,10 +55,10 @@ render() {
   return (
 
     <section>
-      
+
       <h1>Phonebook</h1>
       <Form onSubmit={this.addContact}/> 
-      <h2> Contacts </h2>
+      <h1> Contacts </h1>
 
       <Filter value={filter} onChange={this.changeFilter}/>
      
